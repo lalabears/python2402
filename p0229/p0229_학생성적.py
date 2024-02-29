@@ -42,7 +42,9 @@ while True: # 입력>출력>검색>삭제>수정
                     print('{}님의 현재 국어점수는 {}점입니다.'.format(stu[1],stu[2]))
                     ks = int(input('변경할 점수를 입력해주세요 >> '))
                     students[i][2] = ks # 국어점수 수정
+                    # 총점수정 : 입력된 국어점수 + 기존의 영어점수+기존의 수학점수
                     students[i][5] = ks+students[i][3]+students[i][4]
+                    # 평균수정 : 바뀐 총점을 활용해서 나누기 3 
                     students[i][6] = students[i][5]/3
                     print('국어점수가 변경되었습니다.!!')
                 elif searchNo == '2':
